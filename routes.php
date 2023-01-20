@@ -32,7 +32,7 @@ if (isset($_GET['page'])) {
         case 'jabatandelete':
                     file_exists('pages/admin/jabatandelete.php') ? include 'pages/admin/jabatandelete.php' : include "pages/404.php";
                         break;
-		case 'bagianread':
+        case 'bagianread':
                     file_exists('pages/admin/bagianread.php') ? include 'pages/admin/bagianread.php' : include "pages/404.php";
                         break;
         case 'bagiancreate':
@@ -43,6 +43,15 @@ if (isset($_GET['page'])) {
                         break;
         case 'bagiandelete':
                     file_exists('pages/admin/bagiandelete.php') ? include 'pages/admin/bagiandelete.php' : include "pages/404.php";
+                        break;
+        case 'karyawanread':
+                    file_exists('pages/admin/karyawanread.php') ? include 'pages/admin/karyawanread.php' : include "pages/404.php";
+                        break;
+        case 'karyawancreate':
+                    file_exists('pages/admin/karyawancreate.php') ? include 'pages/admin/karyawancreate.php' : include "pages/404.php";
+                        break;
+        case 'karyawanupdate':
+                    file_exists('pages/admin/karyawanupdate.php') ? include 'pages/admin/karyawanupdate.php' : include "pages/404.php";
                         break;
         default:
             include "pages/404.php";
