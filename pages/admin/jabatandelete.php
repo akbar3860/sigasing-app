@@ -1,20 +1,19 @@
 <?php
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-
     $database = new Database();
-    $db = $database->getConnection();
+    $connection = $database->getConnection();
 
-    $deleteSql = "DELETE FROM jabatan WHERE id = ?";
-    $stmt = $db->prepare($deleteSql);
-    $stmt->bindParam(1, $_GET['id']);
-    if ($stmt->execute()) {
+    $deleteSQL = "DELETE FROM jabatan WHERE id = ?";
+    $statement = $connection->prepare($deleteSQL);
+    $statement->bindParam(1, $id);
+    if ($statement->execute()) {
         $_SESSION['hasil'] = true;
-        $_SESSION['pesan'] = "Berhasil simpan data";
+        $_SESSION['pesan'] = 'Berhasil hapus data';
     } else {
         $_SESSION['hasil'] = false;
-        $_SESSION['pesan'] = "Gagal simpan data";
+        $_SESSION['pesan'] = 'Gagal hapus data';
     }
-    echo "<meta http-equiv='refresh' content='0;url=?page=lokasiread'>";
+    echo '<meta http-equiv="refresh" content="0;url=?page=jabatanread">';
 }
-?>
+
