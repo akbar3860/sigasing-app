@@ -16,3 +16,4 @@ if (isset($_GET['id'])) {
     }
     echo '<meta http-equiv="refresh" content="0;url=?page=jabatanread">';
 }
+
